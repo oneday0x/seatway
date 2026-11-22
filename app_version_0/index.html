@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seatway — Trip Reservations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Seatway</h1>
+        <p>Find your next journey within Poland</p>
+    </header>
+
+    <main>
+        <h2>Available trips</h2>
+
+        <label for="passenger-name">Passenger name</label>
+
+        <input type="text" id="passenger-name" class="text-input" placeholder="Enter your name" autocomplete="name"
+            aria-describedby="passenger-name-error" aria-invalid="false">
+        <p id="passenger-name-error" class="field-error" role="alert"></p>
+        <label for="destination-search">Search by destination</label>
+        <input type="search" id="destination-search" class="text-input" placeholder="For example, Zakopane">
+        <p id="search-status" role="status"></p>
+        <div id="trip-list"></div>
+        <section id="selection-summary" hidden>
+            <h2>Selected trip</h2>
+            <p>Review your details. Your ticket has not been reserved yet.</p>
+            <dl>
+                <dt>Passenger</dt>
+                <dd id="summary-passenger"></dd>
+
+                <dt>Route</dt>
+                <dd id="summary-route"></dd>
+
+                <dt>Departure</dt>
+                <dd id="summary-departure"></dd>
+
+                <dt>Arrival</dt>
+                <dd id="summary-arrival"></dd>
+
+                <dt>Price</dt>
+                <dd id="summary-price"></dd>
+            </dl>
+
+            <button type="button" id="confirm-reservation">
+                Confirm demo reservation
+            </button>
+            <button type="button" id="clear-selection">
+                Clear selection
+            </button>
+        </section>
+
+        <p id="reservation-message" role="status"></p>
+        <section>
+            <h2>My demo reservations</h2>
+            <p>These reservations are temporary and will disappear when you refresh</p>
+            <div id="reservation-list"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
